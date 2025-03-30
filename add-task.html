@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>TaskManager</h2>
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="add-task.html" class="active">Add Task</a></li>
+        <li><button class="logout-btn" onclick="logoutUser()">Logout</button></li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <header>
+        <h1>Add Task</h1>
+    </header>
+
+    <section class="task-form">
+        <form id="task-form">
+            <label for="task-title">Task Title</label>
+            <input type="text" id="task-title" placeholder="Enter task title" required>
+
+            <label for="task-category">Category</label>
+            <select id="task-category">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="task-date">Due Date</label>
+            <input type="date" id="task-date" required>
+
+            <label for="task-priority">Priority</label>
+            <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="moderate">Moderate</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="task-status">Status</label>
+            <select id="task-status">
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>
+
+            <label for="task-description">Description</label>
+            <textarea id="task-description" rows="4" placeholder="Enter task details..."></textarea>
+
+            <button type="submit" class="btn-submit">➕ Add Task</button>
+        </form>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

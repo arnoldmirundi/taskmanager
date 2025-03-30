@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>TaskManager</h2>
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="add-task.html">Add Task</a></li>
+        <li><button class="logout-btn" onclick="logoutUser()">Logout</button></li>    </ul>
+
+    <div class="profile-section">
+        <h3 id="user-name">User</h3>
+        <p id="user-email">email@example.com</p>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <header>
+        <h1>Dashboard</h1>
+        <button id="toggle-dark-mode">🌙 Toggle Dark Mode</button>
+    </header>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <h2>Today's Overview - <span id="current-date"></span></h2>
+        <div class="cards">
+            <div class="card total-tasks">
+                <h3>Total Tasks</h3>
+                <p id="total-tasks">0</p>
+            </div>
+            <div class="card completed-tasks">
+                <h3>Completed</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+            <div class="card pending-tasks">
+                <h3>Pending</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task Lists -->
+    <section class="tasks">
+        <h2>Today's Tasks</h2>
+        <button onclick="window.location.href='add-task.html'" class="btn-primary">➕ Add Task</button>
+        <div id="task-list">
+            <p id="no-tasks">No tasks scheduled for today</p>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

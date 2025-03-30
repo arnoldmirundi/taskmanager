@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>TimeMaster</h2>
+    <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="add-task.html">Add Task</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+
+    <div class="profile-section">
+        <h3 id="user-name">User</h3>
+        <p id="user-email">email@example.com</p>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <h1>All Tasks</h1>
+    
+    <section class="tasks-list">
+        <h2>Your Tasks</h2>
+        <div id="tasks-container"></div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

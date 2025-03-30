@@ -1,0 +1,324 @@
+/* === GLOBAL STYLES === */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-light: #f5f5f5;
+    --background-dark: #1e1e1e;
+    --text-light: #333;
+    --text-dark: #f8f9fa;
+    --card-light: white;
+    --card-dark: #242424;
+    --gradient-blue: linear-gradient(135deg, #6EC6FF, #3498db);
+    --gradient-green: linear-gradient(135deg, #00C853, #388E3C);
+    --gradient-red: linear-gradient(135deg, #FF3D00, #D32F2F);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-light);
+    color: var(--text-light);
+    transition: all 0.3s ease-in-out;
+}
+
+.dark-mode {
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* === SIDEBAR STYLES === */
+/* 🌟 Sidebar Styling */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Pushes user profile to the bottom */
+}
+
+.sidebar ul li {
+    margin: 12px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 12px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sidebar User Profile - Always at Bottom */
+.profile-section {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.profile-section h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.profile-section p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* 🌟 Main Content - Spaced from Sidebar */
+.main-content {
+    margin-left: 270px;
+    padding: 30px;
+}
+
+/* 🌟 Main Content Adjustments */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.main-content.collapsed {
+    margin-left: 80px;
+}
+
+/* === DASHBOARD STYLES === */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.total-tasks {
+    background: var(--gradient-blue);
+}
+
+.completed-tasks {
+    background: var(--gradient-green);
+}
+
+.pending-tasks {
+    background: var(--gradient-red);
+}
+
+/* === TASK LIST STYLING === */
+.tasks {
+    margin-top: 20px;
+}
+
+#task-list {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.dark-mode #task-list {
+    background: var(--card-dark);
+}
+
+/* === DARK MODE TOGGLE === */
+#toggle-dark-mode {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-dark-mode:hover {
+    background: #2980b9;
+}
+
+.task-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.task-form input, .task-form select, .task-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #2980b9;
+}
+
+.logout-btn {
+    background: #6a3ce7;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 100%;
+    font-size: 16px;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
+
+/* Center the form on the page */
+.auth-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Form Box */
+.auth-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Dark Mode */
+body.dark-mode .auth-box {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Title */
+.auth-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Input Fields */
+.auth-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Dark Mode Input */
+body.dark-mode .auth-box input {
+    background: #34495e;
+    color: white;
+    border: 1px solid #fff;
+}
+
+/* Submit Button */
+.auth-box button {
+    width: 100%;
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-box button:hover {
+    background: #2980b9;
+}
+
+/* Alternate Action (e.g., "Don't have an account? Sign up") */
+.auth-box p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-box a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-box a:hover {
+    text-decoration: underline;
+}
